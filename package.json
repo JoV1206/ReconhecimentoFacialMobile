@@ -4,18 +4,48 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit",
+    "verify:math": "node scripts/verify-face-math.js",
+    "verify:alignment": "node scripts/verify-alignment.js",
+    "verify:worklets": "node scripts/verify-worklet-safety.js",
+    "verify": "npm run typecheck && npm run verify:math && npm run verify:alignment && npm run verify:worklets"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "base64-js": "^1.5.1",
     "expo": "~54.0.35",
+    "expo-build-properties": "~1.0.10",
+    "expo-dev-client": "~6.0.21",
+    "expo-file-system": "~19.0.23",
+    "expo-image-manipulator": "~14.0.8",
+    "expo-image-picker": "~17.0.11",
     "expo-status-bar": "~3.0.9",
+    "expo-system-ui": "~6.0.9",
+    "expo-updates": "~29.0.19",
+    "jpeg-js": "^0.4.4",
     "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react-native": "0.81.5",
+    "react-native-fast-tflite": "^2.0.0",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-vision-camera": "^4.7.3",
+    "react-native-vision-camera-face-detector": "^1.10.2",
+    "react-native-worklets-core": "^1.6.3",
+    "vision-camera-resize-plugin": "^3.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/plugin-transform-arrow-functions": "^7.29.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.29.7",
+    "@babel/plugin-transform-shorthand-properties": "^7.29.7",
+    "@babel/plugin-transform-template-literals": "^7.29.7",
+    "@babel/preset-typescript": "^7.29.7",
+    "@types/base64-js": "^1.3.2",
     "@types/react": "~19.1.0",
+    "babel-preset-expo": "~54.0.10",
     "typescript": "~5.9.2"
   },
   "private": true

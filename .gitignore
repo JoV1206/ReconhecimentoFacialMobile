@@ -39,3 +39,15 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# fotos/videos de teste com rostos de pessoas reais (dado biometrico) —
+# ficam so localmente, fora do controle de versao
+IMAGENS_TESTE/
+
+# artefatos Python dos scripts de avaliacao offline
+__pycache__/
+*.pyc
+
+# fixtures de verificacao: contem os pixels dos rostos recortados das fotos de
+# teste (dado biometrico). Sao regeradas localmente por scripts/offline-eval.
+scripts/fixtures/

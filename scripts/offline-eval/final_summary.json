@@ -1,0 +1,23 @@
+{
+ "A1 caixa crua (= app hoje)": {
+  "gap": -0.30423095488584584,
+  "best_t": 0.6500000000000004,
+  "best_err": 21,
+  "n_same": 57,
+  "n_diff": 196
+ },
+ "A2 caixa por keypoints": {
+  "gap": -0.4405670330607224,
+  "best_t": 0.7350000000000005,
+  "best_err": 25,
+  "n_same": 57,
+  "n_diff": 196
+ },
+ "B  alinhado pelos olhos": {
+  "gap": 0.337822773006211,
+  "best_t": 0.46500000000000025,
+  "best_err": 0,
+  "n_same": 57,
+  "n_diff": 196
+ }
+}
